@@ -1,0 +1,114 @@
+
+Recap:
+
+  1. Component Life Cycle:
+
+      Initialization: JS Loads the JSX into the memory
+
+      Mounting: JSX gets loaded into the RealDOM
+
+      Updating: Some contents or state gets updated in the Component JSX
+
+      Unmounting: Removing the element from the RealDOM
+
+  2. Life Cycle Hook - useEffect
+
+      We are gonna target each of the phases and we are going to do something those phases( Mounting, Updating, Unmounting )
+
+      Mounted: useEffect with Mounted
+        Examples: Calculating initial value or loading some data from APIs
+        
+        useEffect(() => {
+          // Statements to execute on Mouted phase 
+
+        }, []);
+    
+      Updated: Liking a particular product / post in instagram
+      useEffect(() => {
+          // mounted is a boolean state for mounting
+          if (mounted) {
+            // Statements to execute on update phase 
+            // dependency array is must
+
+          }
+
+        }, [<dep-val>]);
+    
+
+      Unmounting: Deleting a product from Cart
+        useEffect(() => {
+          
+          return () => {
+            // Statements to execute on un-Mouted phase 
+          }
+
+        }, []);
+  
+  3. Data Passing
+      Parent -> Child
+        Data as props child component
+      Child  -> Parent
+        pass a function as props to child component
+        use that function to pass data argument to the parent component
+
+  
+Topics:
+
+  1. CRUD implementations for the students or similar application 
+
+      CRUD:
+        C - Create
+          Provide a form to create a new item, the created item should be displayed in the UI
+
+        R - Read
+          Read all the data from https://fakestoreapi.com/products?limit=5
+          and display those records
+
+        U - Update
+          Update a select product
+        D - Delete
+          Delete a product from the list
+
+  2. React-Router
+    react-router-dom:
+      Routing the DOM using the url path,
+
+        uses window props location, history
+    
+      BrouserRouter:
+        parent wrapper tag which includes the routes tag
+
+      Routes:
+        includes all the routes
+
+      Route:
+        route with a pathname binds a dom to the path
+        
+      Link:
+        Link - anchor to a specific path
+        Navigates from one page to the other page
+
+      path params:
+        useParams
+      
+      Default Route:
+        default dom element when no route/path is found
+  
+      query params:
+        useSearchParams
+
+Next Session:
+  react-router-dom
+    layout
+    navigation
+  
+  Props Drilling
+
+Task:
+
+  Day 24:
+   https://docs.google.com/document/d/1nuVbWYwyP7N1zC9rAoO0taVvthGWsaHH-nfhNdklTQw/edit
+  
+  React Router DOM
+
+  Homework: Invetigate on ** Props Drilling ** ( I will also explain in next class, please spend around 5mins in Invetigation )
